@@ -16,7 +16,7 @@ const App = () => {
 
   useEffect(() => {
     getData()
-  }, [])
+  })
 
   const getData = async () => {
     try {
