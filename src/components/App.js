@@ -33,10 +33,10 @@ const App = () => {
   if (isLoading) {
     return (
       <div className='loading'>
-        <h1>Loading...</h1>
         <div className='lds-dual-ring'>
 
         </div>
+        <h1>Loading...</h1>
       </div>
     )
   }
@@ -52,12 +52,12 @@ const App = () => {
   return (
     <>
       <div className="title">
-        <h1>Nasa Astronomy Picture of the day 2022</h1>
+        <h1>Spacestagram</h1>
       </div>
       <div className='container'>
         {data.map((data, key) => {
           return (
-            <div key={key} className='content'>
+            <div key={key} className='content-box'>
               <Space {...data} />
             </div>
           )
