@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React from 'react'
 
 const Space = (data) => {
 
@@ -10,7 +10,7 @@ const Space = (data) => {
       <p>Date of Capture: {date}</p>
       {media_type == 'image' &&
         <div className="image">
-          <img src={url} alt={url} />
+          <a href={url}><img src={url} alt={url} /></a>
         </div>}
       {media_type == 'video' &&
         <div className="image">

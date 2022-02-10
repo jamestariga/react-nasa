@@ -16,7 +16,8 @@ body {
 
 .title {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem;
 }
 
@@ -41,6 +42,7 @@ body {
   border-radius: 4rem;
   border: 2px solid rgba(255, 255, 255, 0.18);
   padding: 2rem;
+  text-align: justify;
 }
 
 img {
@@ -86,6 +88,9 @@ iframe {
 }
 
 @media screen and (max-width: 1670px) {
+  :root {
+    font-size: 10px;
+  }
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -97,6 +102,9 @@ iframe {
 }
 
 @media screen and (max-width: 950px) {
+  :root {
+    font-size: 8px;
+  }
   .container {
     display: grid;
     grid-template-columns: 60vw;
