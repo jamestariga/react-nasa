@@ -15,10 +15,7 @@ const App = () => {
   const [isError, setIsError] = useState(false)
 
   useEffect(() => {
-    getData()
-  })
-
-  const getData = async () => {
+    const getData = async () => {
     try {
       const res = await axios.get(url)
       console.log(res.data)
@@ -28,7 +25,10 @@ const App = () => {
       console.error(err)
       setIsError(true)
     }
-  }
+    }
+    
+    getData()
+  }, [])
 
   if (isLoading) {
     return (
