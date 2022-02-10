@@ -4,7 +4,7 @@
 
 ## Intro
 
-This is a personal project and my very first application built using React.
+This is a personal project and my very first application built using React. [Live preview](https://apod2022.netlify.app/)
 
 ## Running the project locally
 
