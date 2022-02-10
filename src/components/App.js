@@ -4,7 +4,8 @@ import axios from 'axios'
 
 const App = () => {
 
-  const API = 'IczwNhzVdgQfEPdZo1vr7rssntWqSiuSr0saxGJW'
+  // API key and URL with the start date 
+  const API = 'YOUR_API_KEY'
 
   const start = '2022-01-01'
 
@@ -14,23 +15,8 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true)
   const [isError, setIsError] = useState(false)
 
-  // useEffect(() => {
-  //   const getData = () => {
-  //     setIsLoading(true)
-  //     axios.get(url)
-  //       .then((res) => {
-  //         setData(d => [...data, ...res.data])
-  //         setIsLoading(false)
-  //       })
-  //       .catch((err) => {
-  //         console.error(err)
-  //         setIsError(err)
-  //       })
-  //   }
-  //   getData()
-  // }, [])
-
   useEffect(() => {
+    // Axios GET Request
     const getData = async () => {
       try {
         const res = await axios.get(url)
@@ -45,6 +31,7 @@ const App = () => {
     getData()
   }, [url])
 
+  // Displays loading animation
   if (isLoading) {
     return (
       <div className='loading'>
@@ -56,6 +43,7 @@ const App = () => {
     )
   }
 
+  // Displays error if error occurs
   if (isError) {
     return (
       <div className='container'>
