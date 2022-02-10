@@ -43,7 +43,7 @@ const App = () => {
       }
     }
     getData()
-  }, [data, url])
+  }, [url])
 
   if (isLoading) {
     return (
