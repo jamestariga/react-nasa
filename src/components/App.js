@@ -14,21 +14,36 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true)
   const [isError, setIsError] = useState(false)
 
+  // useEffect(() => {
+  //   const getData = () => {
+  //     setIsLoading(true)
+  //     axios.get(url)
+  //       .then((res) => {
+  //         setData(d => [...data, ...res.data])
+  //         setIsLoading(false)
+  //       })
+  //       .catch((err) => {
+  //         console.error(err)
+  //         setIsError(err)
+  //       })
+  //   }
+  //   getData()
+  // }, [])
+
   useEffect(() => {
-    const getData = () => {
-      setIsLoading(true)
-      axios.get(url)
-        .then((res) => {
-          setData([...data, ...res.data])
-          setIsLoading(false)
-        })
-        .catch((err) => {
-          console.error(err)
-          setIsError(err)
-        })
+    const getData = async () => {
+      try {
+        const res = await axios.get(url)
+        console.log(res.data)
+        setData(data => [...data, ...res.data])
+        setIsLoading(false)
+      } catch (err) {
+        console.error(err)
+        setIsError(true)
+      }
     }
     getData()
-  }, [])
+  }, [data, url])
 
   if (isLoading) {
     return (
