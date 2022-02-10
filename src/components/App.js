@@ -34,6 +34,9 @@ const App = () => {
     return (
       <div className='loading'>
         <h1>Loading...</h1>
+        <div className='lds-dual-ring'>
+
+        </div>
       </div>
     )
   }
@@ -55,7 +58,6 @@ const App = () => {
         {data.map((data, key) => {
           return (
             <div key={key} className='content'>
-              {/* {console.log(data)} */}
               <Space {...data} />
             </div>
           )
