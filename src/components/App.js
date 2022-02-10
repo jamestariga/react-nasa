@@ -19,7 +19,7 @@ const App = () => {
       setIsLoading(true)
       axios.get(url)
         .then((res) => {
-          setData(res.data)
+          setData([...data, ...res.data])
           setIsLoading(false)
         })
         .catch((err) => {
