@@ -5,7 +5,7 @@ import axios from 'axios'
 const App = () => {
 
   // API key and URL with the start date 
-  const API = 'YOUR_API_KEY'
+  const API = 'IczwNhzVdgQfEPdZo1vr7rssntWqSiuSr0saxGJW'
 
   const start = '2022-01-01'
 
@@ -31,7 +31,7 @@ const App = () => {
     getData()
   }, [url])
 
-  // Displays loading animation
+  // Display loading animation
   if (isLoading) {
     return (
       <div className='loading'>
@@ -43,7 +43,7 @@ const App = () => {
     )
   }
 
-  // Displays error if error occurs
+  // Display error if error occurs
   if (isError) {
     return (
       <div className='container'>
